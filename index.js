@@ -1,8 +1,11 @@
 const express = require("express");
+// const router = require("express").Router();
 const app = express();
 const PORT = 3001;
-app.listen(PORT, () => {
-  console.log(`Server listening on PORT: ${PORT}`);
+const window = location.pathname;
+
+app.get("/", (req, res) => {
+  res.send("Welcome to the Note Taker app!");
 });
 
 let noteTitle;
@@ -190,5 +193,5 @@ if (window.location.pathname === "/notes") {
 getAndRenderNotes();
 
 app.listen(PORT, () => {
-  console.log(`App listening on PORT ${PORT}`);
+  console.log(`Server listening on PORT: ${PORT}`);
 });
