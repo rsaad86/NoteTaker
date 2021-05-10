@@ -1,0 +1,29 @@
+{
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "Note Taker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "RSAAD",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "heroku": "^7.53.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsaad86/NoteTaker.git"
+  },
+  "keywords": [
+    "Note",
+    "Taker"
+  ],
+  "bugs": {
+    "url": "https://github.com/rsaad86/NoteTaker/issues"
+  },
+  "homepage": "https://github.com/rsaad86/NoteTaker#readme"
+}
