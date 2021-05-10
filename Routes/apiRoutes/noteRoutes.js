@@ -8,9 +8,8 @@ const {
   removeNote,
 } = require("../../lib/notes.js");
 
-//initialize the note id counter
-//if there are saved notes then we set the counter to the highest id + 1 which will always be the last note
-//if there are no saved notes then we set the counter to 0
+//note id counter
+//counter is set to 0 if there are no notes
 let noteId = notes.length > 0 ? notes[notes.length - 1].id + 1 : 1;
 
 //Respond with all notes in JSON format
@@ -29,7 +28,7 @@ router.post("/notes", (req, res) => {
     //add the note to the notes array for writing
     const addedNote = addNewNote(notes, note);
 
-    //increment the note id if the note has been validated.
+    //Note ID increment
     noteId++;
 
     res.json(addedNote);
